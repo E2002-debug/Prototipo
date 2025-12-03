@@ -69,7 +69,7 @@ Incluye:
 
 ### 🖼️ **2. Pantalla de Inicio de Sesión**
 
-![Login](pantalla_login.png)
+![Login](
 
 Campos:
 - Correo
@@ -80,8 +80,7 @@ Campos:
 
 ### 🖼️ **3. Pantalla Agregar Mascota**
 
-![Agregar](pantalla_agregar.png)
-
+![Agregar]
 Formulario con:
 - Nombre mascota  
 - Tipo (perro, gato, etc.)  
@@ -94,7 +93,7 @@ Formulario con:
 
 ### 🖼️ **4. Pantalla Agendar Cita**
 
-![Agendar](pantalla_agendar.png)
+![Agendar]
 
 Campos:
 - Mascota
@@ -109,7 +108,7 @@ Incluye:
 
 ### 🖼️ **5. Mensaje de éxito**
 
-![Éxito](pantalla_exito.png)
+![Éxito]
 
 Se muestra cuando:
 - Se guarda una mascota
