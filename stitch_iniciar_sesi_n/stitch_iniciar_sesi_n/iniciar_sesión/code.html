@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Iniciar Sesión - PelusasSpa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+            line-height: 1; /* Ensures icon is vertically centered */
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4FBDBA",
+              "background-light": "#F8F9FA",
+              "background-dark": "#111921",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center items-center p-4 lg:p-8">
+<div class="layout-content-container flex flex-col w-full max-w-6xl flex-1">
+<div class="flex w-full grow bg-white dark:bg-background-dark rounded-xl shadow-lg overflow-hidden">
+<div class="hidden lg:flex w-1/2 items-center justify-center p-8 bg-primary/10 dark:bg-primary/20">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-xl" data-alt="A happy, fluffy white dog being groomed and looking at the camera." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLsNEGKQjWvWqXhG6ROiB2_bfrBFZFXO8XtZgnmYKnPVwCiL9iXUu7jnZzESBchBf_QGsPi90E8kHOhtjkHTU55QRlOYtYJoqqae5H2GJ9Byd-EAiPDZNIUN6HYLMzKCV22AUNBntXzVJgkP8OEpxLTyV_FELkkcuPAtEjLEpERe87-iCwgJy7STxWInN8-uyulmkM_ED3DJCPjLQuKI-5Vlms3Nnlx1HoSJJ7UySINEBh-Pa3VRm_d7j8Fzbk0yPPiHbgg0ny94Q");'></div>
+</div>
+<div class="w-full lg:w-1/2 p-8 sm:p-12 flex flex-col justify-center">
+<div class="flex flex-col items-start gap-2 mb-8">
+<h2 class="text-2xl font-bold text-primary dark:text-primary">PelusasSpa</h2>
+<h1 class="text-[#343A40] dark:text-white tracking-tight text-[32px] font-bold leading-tight text-left">Bienvenido de nuevo</h1>
+<p class="text-gray-500 dark:text-gray-400">Inicia sesión para agendar la próxima cita de tu mascota.</p>
+</div>
+<div class="flex flex-col gap-4">
+<label class="flex flex-col w-full">
+<p class="text-[#343A40] dark:text-gray-200 text-base font-medium leading-normal pb-2">Correo electrónico</p>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-gray-400 dark:text-gray-500">mail</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#343A40] dark:text-white dark:bg-background-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-white focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder-gray-500 pl-12 pr-4 text-base font-normal leading-normal" placeholder="tucorreo@ejemplo.com" type="email" value=""/>
+</div>
+</label>
+<label class="flex flex-col w-full">
+<p class="text-[#343A40] dark:text-gray-200 text-base font-medium leading-normal pb-2">Contraseña</p>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-gray-400 dark:text-gray-500">lock</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#343A40] dark:text-white dark:bg-background-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-white focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder-gray-500 pl-12 pr-12 text-base font-normal leading-normal" placeholder="Ingresa tu contraseña" type="password" value=""/>
+<button class="absolute right-4 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary">
+<span class="material-symbols-outlined" data-icon="Eye">visibility</span>
+</button>
+</div>
+</label>
+</div>
+<div class="flex py-6 justify-start w-full">
+<a href="../inicio_/_dashboard/code.html" 
+   class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors duration-200">
+    <span class="truncate">Iniciar Sesión</span>
+</a>
+
+</div>
+<div class="flex justify-center text-center">
+    <p class="text-gray-500 dark:text-gray-400">
+        ¿No tienes cuenta? 
+        <a class="font-bold text-[#F79489] hover:underline" href="../registro_de_usuario/code.html">Regístrate</a>
+    </p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

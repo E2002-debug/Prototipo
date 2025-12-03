@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agendar Cita - PelusasSpa</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- SWEETALERT2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- FLATPICKR (FECHA Y HORA BONITAS) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24
+}
+.selected {
+    border-color: #4799eb !important;
+    background-color: #e7f2ff !important;
+}
+</style>
+
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#4799eb",
+        "background-light": "#f6f7f8",
+        "background-dark": "#111921",
+      },
+      fontFamily: {
+        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+      }
+    },
+  },
+}
+</script>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark">
+
+<!-- BOTÓN REGRESAR -->
+<button onclick="window.history.back()"
+    class="flex items-center gap-2 px-4 py-2 mt-4 ml-4 text-primary text-lg font-semibold hover:text-blue-600 transition">
+    <span class="material-symbols-outlined text-3xl">arrow_back</span>
+    Regresar
+</button>
+
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="layout-container flex h-full grow flex-col">
+
+<header class="flex items-center justify-between border-b px-4 md:px-10 py-3 bg-white">
+<div class="flex items-center gap-4 text-[#111418]">
+<h2 class="text-lg font-bold">PelusasSpa</h2>
+</div>
+</header>
+
+<main class="px-4 md:px-10 py-10 max-w-[960px] mx-auto">
+
+<h1 class="text-4xl font-black">Agenda tu Cita</h1>
+<p class="text-gray-600">Sigue los pasos para reservar un turno.</p>
+
+<div class="mt-10 space-y-12">
+
+<h2 class="text-2xl font-bold">1. Elige tu mascota</h2>
+
+<div id="mascotas" class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] gap-4">
+
+    <div class="card-mascota flex flex-col gap-3 text-center p-2 border-2 rounded-xl cursor-pointer">
+        <div class="w-full bg-center bg-cover aspect-square rounded-full" 
+             style="background-image:url('https://picsum.photos/id/237/300');"></div>
+        <p class="font-medium">Rocky</p>
+    </div>
+
+    <div class="card-mascota flex flex-col gap-3 text-center p-2 border-2 rounded-xl cursor-pointer">
+        <div class="w-full bg-center bg-cover aspect-square rounded-full" 
+             style="background-image:url('https://picsum.photos/id/1025/300');"></div>
+        <p class="font-medium">Luna</p>
+    </div>
+
+</div>
+
+<h2 class="text-2xl font-bold">2. Selecciona un servicio</h2>
+
+<div id="servicios" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+    <div class="card-servicio flex items-center gap-4 p-4 border rounded-xl cursor-pointer">
+        <span class="material-symbols-outlined bg-primary text-white p-3 rounded-full">shower</span>
+        <div>
+            <p class="font-bold">Baño y Secado</p>
+            <p class="text-sm text-gray-500">Limpieza profunda</p>
+        </div>
+    </div>
+
+    <div class="card-servicio flex items-center gap-4 p-4 border rounded-xl cursor-pointer">
+        <span class="material-symbols-outlined bg-gray-200 p-3 rounded-full">content_cut</span>
+        <div>
+            <p class="font-bold">Corte Completo</p>
+            <p class="text-sm text-gray-500">Estilo y frescura</p>
+        </div>
+    </div>
+
+</div>
+
+<h2 class="text-2xl font-bold">3. Fecha y hora</h2>
+
+<!-- FECHA BONITA -->
+<input id="fecha" type="text" placeholder="Selecciona la fecha"
+       class="w-full p-3 border rounded-lg">
+
+<!-- HORA BONITA -->
+<input id="hora" type="text" placeholder="Selecciona la hora"
+       class="w-full p-3 border rounded-lg mt-4">
+
+<button id="guardarCita"
+        class="mt-10 w-full bg-primary text-white p-4 text-lg rounded-xl font-bold hover:bg-blue-600 transition">
+    Guardar Cita
+</button>
+
+</div>
+</main>
+</div>
+</div>
+
+
+<script>
+/* --- Flatpickr estilos bonitos --- */
+flatpickr("#fecha", {
+    dateFormat: "Y-m-d",
+    minDate: "today",
+    locale: "es"
+});
+
+flatpickr("#hora", {
+    enableTime: true,
+    noCalendar: true,
+    time_24hr: true,
+    dateFormat: "H:i"
+});
+
+/* Mascotas */
+document.querySelectorAll(".card-mascota").forEach(card => {
+    card.onclick = () => {
+        document.querySelectorAll(".card-mascota").forEach(c => c.classList.remove("selected"));
+        card.classList.add("selected");
+    };
+});
+
+/* Servicios */
+document.querySelectorAll(".card-servicio").forEach(card => {
+    card.onclick = () => {
+        document.querySelectorAll(".card-servicio").forEach(c => c.classList.remove("selected"));
+        card.classList.add("selected");
+    };
+});
+
+/* Guardar cita con mensaje bonito */
+document.getElementById("guardarCita").onclick = function () {
+
+    const mascota = document.querySelector(".card-mascota.selected");
+    const servicio = document.querySelector(".card-servicio.selected");
+    const fecha = document.getElementById("fecha").value;
+    const hora = document.getElementById("hora").value;
+
+    if (!mascota || !servicio || !fecha || !hora) {
+        Swal.fire({
+            icon: "warning",
+            title: "Formulario incompleto",
+            text: "Por favor completa todos los pasos.",
+            confirmButtonColor: "#4799eb",
+        });
+        return;
+    }
+
+    Swal.fire({
+        title: "¿Confirmas tu cita? 🐾",
+        html: `
+        <b>Mascota:</b> ${mascota.innerText}<br>
+        <b>Servicio:</b> ${servicio.innerText}<br>
+        <b>Fecha:</b> ${fecha}<br>
+        <b>Hora:</b> ${hora}
+        `,
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Sí, guardar",
+        cancelButtonText: "Cancelar",
+        confirmButtonColor: "#4799eb",
+        cancelButtonColor: "#d33"
+    }).then(result => {
+
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: "¡Cita Registrada! 🐶✨",
+                text: "Tu cita ha sido guardada con éxito.",
+                icon: "success",
+                confirmButtonColor: "#4799eb"
+            }).then(() => {
+                window.location.href = "../agendar_cita_2/code.html";
+            });
+        }
+
+    });
+
+};
+</script>
+
+</body>
+</html>

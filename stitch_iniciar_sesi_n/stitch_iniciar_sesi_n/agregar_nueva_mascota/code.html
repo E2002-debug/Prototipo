@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agregar Nueva Mascota - PelusasSpa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#4799eb",
+            "background-light": "#f6f7f8",
+            "background-dark": "#111921",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+</script>
+
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+
+    @keyframes fadeIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+</style>
+</head>
+
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+
+<header class="flex items-center justify-between border-b border-solid border-b-[#f0f2f4] dark:border-b-[#2c333a] px-4 sm:px-10 py-3">
+
+    <!-- BOTÓN REGRESAR -->
+    <button onclick="window.history.back()"
+        class="flex items-center gap-2 px-4 py-2 text-primary text-lg font-semibold hover:text-blue-600 transition">
+        <span class="material-symbols-outlined text-3xl">arrow_back</span>
+        Regresar
+    </button>
+
+    <div class="flex items-center gap-4 text-[#111418] dark:text-white">
+      <h2 class="text-lg font-bold">PelusasSpa</h2>
+    </div>
+
+    <button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-[#f0f2f4] dark:bg-background-dark text-sm font-bold dark:text-white">
+      Mi Cuenta
+    </button>
+    <div class="hidden md:flex flex-1 justify-end items-center gap-8">
+    <div class="flex items-center gap-9">
+        <a class="text-[#111418] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" 
+           href="../inicio_/_dashboard/code.html">
+            Inicio
+        </a>
+        <a class="text-[#111418] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" 
+           href="../mis_mascotas/code.html">
+            Mis Mascotas
+        </a>
+        <a class="text-primary dark:text-primary text-sm font-bold leading-normal" 
+           href="../agendar_cita_1/code.html">
+            Mis Citas
+        </a>
+    </div>
+
+
+    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxT8kduR_fvgvwqilUARz5ZZalZetMHdhAlTom21oyH8mC67tHHCMD7pjgk8kwQw-mAB9t_t4sTS0wvZo2lV2jsBHfpBxpow5goQDmBTjATfqr_8la0zCuJTo9uUmCxuoIsjADpaqTAWAZL4oAANnQVU3BillDmFv74Hju55vbI46jI1GS9F9xj8d7I4lCF6DJdtbPYmlKUuCy2x2bjrai_XMEoKETmuqzsPXn3vgPzDACmEidA18mfWvQRqBy_TmU160E6ExBebk");'></div>
+</div>
+</header>
+
+<main class="flex flex-1 justify-center py-5 sm:py-10 px-4">
+<div class="flex flex-col w-full max-w-[960px]">
+
+<h1 class="text-4xl font-black mb-2 text-[#111418] dark:text-white">Agrega una nueva mascota a tu perfil</h1>
+<p class="text-[#637588] dark:text-[#aeb8c4] mb-6">Completa los detalles a continuación para registrar a tu compañero peludo.</p>
+
+<form class="flex flex-col gap-8 p-4">
+
+    <div class="flex flex-col items-center gap-6 rounded-xl border-2 border-dashed border-[#dce0e5] dark:border-[#2c333a] px-6 py-14">
+        <p class="text-lg font-bold text-[#111418] dark:text-white">Foto de la mascota</p>
+        <button type="button" class="flex items-center justify-center h-10 px-6 rounded-lg bg-[#f0f2f4] dark:bg-[#2c333a] text-sm font-bold text-[#111418] dark:text-white">
+            Subir foto
+        </button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <label class="flex flex-col">
+            <p class="pb-2 text-base font-medium text-[#111418] dark:text-white">Nombre de la mascota</p>
+            <input placeholder="Escribe el nombre de tu mascota"
+                class="form-input h-14 rounded-lg border border-[#dce0e5] dark:border-[#2c333a] bg-white dark:bg-[#1a232b] p-[15px] focus:ring-primary/50 focus:border-primary"/>
+        </label>
+
+        <label class="flex flex-col">
+            <p class="pb-2 text-base font-medium text-[#111418] dark:text-white">Raza</p>
+            <input placeholder="Ej. Golden Retriever"
+                class="form-input h-14 rounded-lg border border-[#dce0e5] dark:border-[#2c333a] bg-white dark:bg-[#1a232b] p-[15px] focus:ring-primary/50 focus:border-primary"/>
+        </label>
+
+        <label class="flex flex-col">
+            <p class="pb-2 text-base font-medium text-[#111418] dark:text-white">Edad</p>
+            <input placeholder="Ej. 2 años"
+                class="form-input h-14 rounded-lg border border-[#dce0e5] dark:border-[#2c333a] bg-white dark:bg-[#1a232b] p-[15px] focus:ring-primary/50 focus:border-primary"/>
+        </label>
+
+    </div>
+
+    <div class="flex flex-col sm:flex-row justify-end items-center gap-4 pt-4 border-t border-[#f0f2f4] dark:border-[#2c333a]">
+
+        <button type="button"
+            class="flex w-full sm:w-auto h-12 px-6 rounded-lg bg-[#f0f2f4] dark:bg-[#2c333a] text-base font-bold text-[#111418] dark:text-white">
+            Cancelar
+        </button>
+
+        <!-- BOTÓN GUARDAR -->
+        <button type="button"
+           onclick="abrirModal()"
+           class="flex w-full sm:w-auto h-12 px-6 rounded-lg bg-primary text-white text-base font-bold">
+           Guardar
+        </button>
+
+    </div>
+
+</form>
+</div>
+</main>
+</div>
+
+<!-- ========== MODAL BONITO ========== -->
+<div id="modalGuardar"
+     class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+
+    <div class="bg-white dark:bg-[#1a232b] p-8 rounded-2xl shadow-2xl w-80 text-center"
+         style="animation: fadeIn .25s ease">
+
+        <h2 class="text-xl font-extrabold text-[#111418] dark:text-white mb-3">¿Guardar Mascota?</h2>
+
+        <p class="text-[#637588] dark:text-[#aeb8c4] mb-6">
+            Confirma si deseas guardar esta información.
+        </p>
+
+        <div class="flex justify-between gap-3">
+            <button onclick="cerrarModal()"
+                class="flex-1 py-2 rounded-lg border border-gray-300 dark:border-[#2c333a] hover:bg-gray-100 dark:hover:bg-[#2c333a] transition text-[#111418] dark:text-white">
+                Cancelar
+            </button>
+
+            <a href="../mis_mascotas/code.html"
+                class="flex-1 py-2 rounded-lg bg-primary text-white hover:bg-blue-700 transition">
+                Confirmar
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========== SCRIPT ========== -->
+<script>
+function abrirModal() {
+    document.getElementById("modalGuardar").classList.remove("hidden");
+    document.getElementById("modalGuardar").classList.add("flex");
+}
+
+function cerrarModal() {
+    document.getElementById("modalGuardar").classList.add("hidden");
+    document.getElementById("modalGuardar").classList.remove("flex");
+}
+</script>
+
+</body>
+</html>

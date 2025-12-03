@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Mascotas - PelusasSpa</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4799eb",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark">
+
+    <div class="relative min-h-screen flex flex-col">
+
+        <!-- HEADER -->
+        <header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-6 py-3 bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10">
+
+            <div class="flex items-center gap-4 text-slate-800 dark:text-slate-200">
+
+                <!-- Botón de regresar -->
+                <button onclick="window.history.back()" class="flex items-center gap-2 text-primary text-lg hover:text-blue-600 transition">
+                    <span class="material-symbols-outlined text-3xl">arrow_back</span>
+                </button>
+
+                <h2 class="text-lg font-bold">PelusasSpa</h2>
+            </div>
+
+            <button class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-100 dark:bg-slate-800">
+                <span class="material-symbols-outlined text-slate-600 dark:text-slate-400">person</span>
+            </button>
+            <div class="hidden md:flex flex-1 justify-end items-center gap-8">
+    <div class="flex items-center gap-9">
+        <a class="text-[#111418] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" 
+           href="../inicio_/_dashboard/code.html">
+            Inicio
+        </a>
+        <a class="text-[#111418] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" 
+           href="../mis_mascotas/code.html">
+            Mis Mascotas
+        </a>
+        <a class="text-primary dark:text-primary text-sm font-bold leading-normal" 
+           href="../agendar_cita_1/code.html">
+            Mis Citas
+        </a>
+    </div>
+
+
+    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxT8kduR_fvgvwqilUARz5ZZalZetMHdhAlTom21oyH8mC67tHHCMD7pjgk8kwQw-mAB9t_t4sTS0wvZo2lV2jsBHfpBxpow5goQDmBTjATfqr_8la0zCuJTo9uUmCxuoIsjADpaqTAWAZL4oAANnQVU3BillDmFv74Hju55vbI46jI1GS9F9xj8d7I4lCF6DJdtbPYmlKUuCy2x2bjrai_XMEoKETmuqzsPXn3vgPzDACmEidA18mfWvQRqBy_TmU160E6ExBebk");'></div>
+</div>
+        </header>
+
+        <!-- MAIN -->
+        <main class="flex-1 p-6">
+
+            <div class="flex justify-between items-center mb-6">
+                <p class="text-slate-900 dark:text-white text-4xl font-black tracking-tight">Mis Mascotas</p>
+            </div>
+
+            <!-- GRID DE MASCOTAS -->
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
+
+                <!-- Tarjeta 1 -->
+                <div class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-900/50 rounded-xl shadow-sm hover:shadow-md border border-slate-200 dark:border-slate-800">
+                    <div class="w-full aspect-square bg-cover bg-center"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxeg7cYrb7aNH4L0B3AaWuAtTunLqCBHk_gxDR3TdHYLNrBmqA_hCinFvTbWGm88KKi92W4Zxq0N7qbPJMFmTDUomX8A_gSvJHZ-CEsI8E0xb-jjGG5NxrPiATcCcQ5nS52CizgoiNUzzyGroEIJdvFQCvPHNkttV2stXiitHfhbecEQu-HrR0JHBZBxAa_OTgD_lPaYL7nxiLjT-px6IwCR3tLKgpypV1pcjOfvUmLbQyT6mzrX7UiCFIG2nUAa_vSsFE61WtCt8");'>
+                    </div>
+                    <div class="px-4">
+                        <p class="text-lg font-bold text-slate-800 dark:text-slate-200">Max</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Raza: Golden Retriever</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Edad: 2 años</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-900/50 rounded-xl shadow-sm hover:shadow-md border border-slate-200 dark:border-slate-800">
+                    <div class="w-full aspect-square bg-cover bg-center"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXdG3H4G5gk7Qde5jgB7nDOAe73mGfahejEDYdY6qdjHC9PAVzApShIomtLRNHdvvot5Q8OI6PxCHEDv8AlkxucasZpn0i_8tm1kRXEFDKENlrLgQW9DMFc5hFhzKMTO2zTVX58NYddXLoM_WGEoxsvkMhK_Az0B1AQUi6vhPSl6pjpbJ7VoiKX04I0YozzG3tRfd_SMIn8z0GS_1c3sgt3qrzeHaL48gWX2rstn_h7RDZOshPa44YFqiml4NQUElKgpmAWufFgvE");'>
+                    </div>
+                    <div class="px-4">
+                        <p class="text-lg font-bold text-slate-800 dark:text-slate-200">Luna</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Raza: Beagle</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Edad: 5 años</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-900/50 rounded-xl shadow-sm hover:shadow-md border border-slate-200 dark:border-slate-800">
+                    <div class="w-full aspect-square bg-cover bg-center"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBw8EJXByNAG-x5D9vCR8zaGQvlBI1HSprZEPdLUQpNRbVlJ61w98imYnJMxp-Wv01XiavvP7NDXgVTPlG8sdsIt0MAaXttQwILb0IL4eHKg07nnSyUg21hXyJzdPMpexfvzkogORtlThkdGwtp6wE0eIrKqk3qRHgHk8K5X236XXy6LOp8H16MNlcDOFcXxmYTHlKpoFSYeSdPM2eSQOdWYz06JvBQf1AesD_gm9mNUTsol45ueJ1a5JQOth6RltQKxx2Gm642lWE");'>
+                    </div>
+                    <div class="px-4">
+                        <p class="text-lg font-bold text-slate-800 dark:text-slate-200">Rocky</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Raza: Pastor Alemán</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Edad: 3 años</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-900/50 rounded-xl shadow-sm hover:shadow-md border border-slate-200 dark:border-slate-800">
+                    <div class="w-full aspect-square bg-cover bg-center"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBM1vwDYy6qbTYC5gbZUgcSUJz1mZ3Kbi9ej95v3SZ3vo0cUduXOPEvqbSnZhAjerYCx1WMLBPSn7DW41P-W1VKHEXGiyaOXKyzCgnDr5pSCD9xJaiLFEMlUenwIQbnsO9CfXOEsk-LwKnW3hhyYZ0TzBjZH7jJ7_hlFdxhZdkuSfhwrYkGBFOGKe-BuO4Ein8BVSGsPqt_X21bMQpi8oiwyD8IopYkvvshGBsAB1bfAui_6ozMG1wBjp9dN3TCSqDEpZ0c_0k-Ow8");'>
+                    </div>
+                    <div class="px-4">
+                        <p class="text-lg font-bold text-slate-800 dark:text-slate-200">Bella</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Raza: Caniche</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Edad: 7 años</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- BOTÓN AGREGAR MASCOTA (con confirmación) -->
+        <div class="fixed bottom-8 right-8">
+            <button id="btn-agregar" class="flex items-center gap-3 h-14 px-5 rounded-xl bg-primary text-white shadow-lg hover:bg-primary/90 transition font-bold">
+                <span class="material-symbols-outlined">add</span>
+                Agregar mascota
+            </button>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT CONFIRMACIÓN -->
+    <script>
+        document.getElementById("btn-agregar").addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const modal = document.createElement("div");
+            modal.className = "fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[999] animate-fadeIn";
+
+            modal.innerHTML = `
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-xl w-80 text-center animate-scaleIn">
+                    <h2 class="text-xl font-bold text-slate-800 dark:text-white mb-3">¿Agregar mascota?</h2>
+                    <p class="text-slate-600 dark:text-slate-300 mb-6">Serás redirigido al formulario.</p>
+                    
+                    <div class="flex justify-center gap-3">
+                        <button id="cancelar" class="px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                            Cancelar
+                        </button>
+                        
+                        <button id="confirmar" class="px-4 py-2 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 transition">
+                            Continuar
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
+
+            const style = document.createElement("style");
+            style.textContent = `
+                .animate-fadeIn { animation: fadeIn .2s ease-out; }
+                .animate-scaleIn { animation: scaleIn .2s ease-out; }
+
+                @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+                @keyframes scaleIn { from { transform: scale(.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+            `;
+            document.head.appendChild(style);
+
+            document.getElementById("cancelar").onclick = () => modal.remove();
+            document.getElementById("confirmar").onclick = () => {
+                window.location.href = "../agregar_nueva_mascota/code.html";
+            };
+        });
+    </script>
+
+</body>
+
+</html>

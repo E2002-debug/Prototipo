@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Inicio / Dashboard - PelusasSpa</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#4799eb",
+        "background-light": "#f6f7f8",
+        "background-dark": "#111921",
+      },
+      fontFamily: { "display": ["Plus Jakarta Sans", "sans-serif"] },
+      borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+    },
+  },
+}
+</script>
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+</style>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<div class="flex h-full min-h-screen w-full flex-row">
+
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col gap-8 border-r border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-background-dark">
+
+<div class="flex items-center gap-3 px-3">
+  <span class="material-symbols-outlined text-primary text-3xl">pets</span>
+  <h1 class="text-xl font-bold text-[#111418] dark:text-white">PelusasSpa</h1>
+</div>
+
+
+<nav class="flex flex-col gap-2">
+
+  <a class="flex items-center gap-3 rounded-lg bg-primary/20 px-3 py-2"
+     href="../../inicio_dashboard/code.html">
+    <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">home</span>
+    <p class="text-sm font-medium text-primary">Inicio</p>
+  </a>
+
+  <a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5"
+     href="../../mis_mascotas/code.html">
+    <span class="material-symbols-outlined text-[#637588] dark:text-slate-400">pet_supplies</span>
+    <p class="text-sm font-medium text-[#111418] dark:text-slate-300">Mascotas</p>
+  </a>
+
+  <a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5"
+     href="../../agendar_cita_2/code.html">
+    <span class="material-symbols-outlined text-[#637588] dark:text-slate-400">pet_supplies</span>
+    <p class="text-sm font-medium text-[#111418] dark:text-slate-300">Mis Citas</p>
+  </a>
+
+  
+
+  <a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5" href="#">
+    <span class="material-symbols-outlined text-[#637588] dark:text-slate-400">settings</span>
+    <p class="text-sm font-medium text-[#111418] dark:text-slate-300">Ajustes</p>
+  </a>
+
+</nav>
+</aside>
+
+<!-- Main Content -->
+<main class="flex flex-1 flex-col">
+
+<!-- TopNavBar -->
+<header class="flex items-center justify-end border-b border-slate-200 bg-white px-10 py-3 dark:border-slate-800 dark:bg-background-dark">
+  <div class="flex items-center gap-4">
+
+    <!-- Notificaciones -->
+    <button class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 dark:text-white">
+      <span class="material-symbols-outlined text-xl">notifications</span>
+    </button>
+
+    <!-- Foto de perfil -->
+    <div class="h-10 w-10 rounded-full bg-cover bg-center"
+         style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnZVAoNHSCWQouOe9dMBBnUcWJdSUHYFl2FQz-dcpYWinFFIaRtchnmKk8RwcGSjTbKGIDfHL7Be1kb65gHFtsoKqU70ZulthsuvmyDVlICbVunT33LPicuyH4ZbJepvx8lYV3bY4lMogLANVKU35CK7lDbPwQqSENHIhRyRB2q-QaT8zCPskoLBdHW3sK7wEXhS9wYEdr-w2Uz-xFn7u8Pe8xVZEunCbMzAkKyukIVSmwtY5kMuXt19Vo0mkFWx8P2e7FdINt4JU');">
+    </div>
+
+    <!-- Botón Salir con enlace -->
+    <a href="../../iniciar_sesión/code.html"
+   class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold 
+          shadow-md shadow-primary/30 hover:bg-primary/90 transition">
+  <span class="material-symbols-outlined text-lg">logout</span>
+  Salir
+</a>
+
+  </div>
+</header>
+<div class="flex flex-1 flex-col gap-8 p-10">
+
+<!-- PageHeading -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+  <p class="text-4xl font-black text-[#111418] dark:text-white">Hola, Carlos!</p>
+  <p class="text-base text-[#637588] dark:text-slate-400">Aquí tienes un resumen de la actividad de tus mascotas.</p>
+</div>
+
+<a href="../../agendar_cita_1/code.html"
+   class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center gap-2 rounded-lg bg-primary px-6 text-white font-bold shadow-lg shadow-primary/30">
+  <span class="material-symbols-outlined">add</span>
+  <span class="truncate">Agendar Cita</span>
+</a>
+</div>
+
+<!-- Dashboard principal -->
+<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+<div class="flex flex-col gap-8 lg:col-span-2">
+
+<h2 class="text-[22px] font-bold text-[#111418] dark:text-white">Tu próxima cita</h2>
+
+<div class="flex items-stretch justify-between gap-6 rounded-xl bg-white p-5 shadow-[0_4px_24px_rgba(0,0,0,0.05)] dark:bg-slate-900">
+
+<div class="flex flex-[2_2_0px] flex-col justify-between gap-4">
+  <div class="flex flex-col gap-2">
+    <p class="text-lg font-bold text-[#111418] dark:text-white">Corte y Baño para Rocky</p>
+
+    <div class="flex items-center gap-2 text-sm text-[#637588] dark:text-slate-400">
+      <span class="material-symbols-outlined text-base">calendar_today</span>
+      <span>Martes, 28 de Octubre</span>
+    </div>
+
+    <div class="flex items-center gap-2 text-sm text-[#637588] dark:text-slate-400">
+      <span class="material-symbols-outlined text-base">schedule</span>
+      <span>10:30 AM</span>
+    </div>
+  </div>
+
+  <button class="flex h-9 w-fit gap-1.5 rounded-lg bg-slate-100 px-4 text-sm font-medium hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white">
+    <span>Ver detalles</span>
+    <span class="material-symbols-outlined text-base">arrow_forward</span>
+  </button>
+</div>
+
+<div class="hidden sm:block w-full flex-1 rounded-lg bg-cover bg-center"
+     style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4vW3BrvOMKCOInxH9rs-u_JuTcTto0tAytOacLoyXr46cDfOGlDlqXT7kJDyE1EhMfc8hyQjRZtxLGw5acSojTeLB8N4R6gbmHBFVtY-ABsuqeW7jcUH31y2YCY7I7CajGheIFxoqo44HILTOu9EvzSQ7Jofy3vRYdj3Hp3kXWwOC2q7rXFHIxYCpWcudKGXogt48DdHVJYRAJYnS-FopsKbvku6JNVeEWglrKSeVEzSqItRTk0qaeR4vE12nfRWijIPYXfn7Lh0');">
+</div>
+
+</div>
+</div>
+
+<div class="flex flex-col gap-5">
+
+<h2 class="text-[22px] font-bold text-[#111418] dark:text-white">Tus Mascotas</h2>
+
+<div class="flex flex-col gap-4">
+
+<!-- Mascota 1 -->
+<div class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-[0_4px_24px_rgba(0,0,0,0.05)] dark:bg-slate-900">
+  <div class="h-16 w-16 rounded-full bg-cover bg-center"
+       style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbCY1JUG9_gboX9k13mIVHQG9KqAsBvIC1ZvZE3x1Mya1UFSWPpa1URsJ8ytBEbqhnXO_FIQsygWs0XnenedOKWQX4mXpLjY3g1rLoNzy_f24Mt9NEBlnUybSpkJJjr6UR-C9CVzR-vMpprDKbnVpBAP7-5mh9Gam0uB4URJQJ1rAA6GGSy-ZlP3-fXrHJJ3rIgsHedoIBCz-L_h_4V4fiXsOoY2EYl0iirPM7XQGxbALdAwKx_epy07yw20dtKRjx0JiscXWlBww');">
+  </div>
+  <div class="flex-grow">
+    <p class="text-base font-bold text-[#111418] dark:text-white">Rocky</p>
+    <p class="text-sm text-[#637588] dark:text-slate-400">Golden Retriever</p>
+  </div>
+  <button class="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700">
+    <span class="material-symbols-outlined text-xl">more_vert</span>
+  </button>
+</div>
+
+<!-- Mascota 2 -->
+<div class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-[0_4px_24px_rgba(0,0,0,0.05)] dark:bg-slate-900">
+  <div class="h-16 w-16 rounded-full bg-cover bg-center"
+       style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkZS-yQYIILNCmkMMmuvVnASOCuSY_Y4vdhDFRnneLxB2VipxkKOZ683PqOJG0mZPjQRi0dOccj5I5GSRYYZnwyp-k--zqxZjqgoJw0BUMU_ogo-_eq8Rjzdy5FFt4qYPezcPGt_rF0PZ_mvxvfhpkJbEAafxOWTT3oYkpq-HXsuzjLJnNFhcufxhRu4SczQ5r3otp77RfKJHw-nYEiS6EgxaS0YVjXvuaoCw35kDm-DVEvoMfDiuJ7epzH-bD2cQjsjPKEMRTrjM');">
+  </div>
+  <div class="flex-grow">
+    <p class="text-base font-bold text-[#111418] dark:text-white">Max</p>
+    <p class="text-sm text-[#637588] dark:text-slate-400">Beagle</p>
+  </div>
+  <button class="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700">
+    <span class="material-symbols-outlined text-xl">more_vert</span>
+  </button>
+</div>
+
+<!-- Añadir nueva mascota -->
+<div class="flex cursor-pointer items-center justify-center gap-4 rounded-xl border-2 border-dashed border-slate-300 p-4 hover:border-primary hover:bg-primary/10 dark:border-slate-700">
+
+  <div class="flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800">
+    <span class="material-symbols-outlined text-3xl text-primary">add</span>
+  </div>
+
+  <a href="../../agregar_nueva_mascota/code.html" class="flex-grow">
+    <p class="text-base font-bold text-primary">Añadir Mascota</p>
+    <p class="text-sm text-[#637588] dark:text-slate-400">Registra un nuevo amigo</p>
+  </a>
+
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</main>
+</div>
+</div>
+</body>
+</html>
