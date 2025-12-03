@@ -55,7 +55,7 @@ Copiar código
 
 ### 🖼️ **1. Pantalla de Registro**
 
-![Registro](pantalla_registro.png)
+
 
 Incluye:
 - Nombre
@@ -69,7 +69,7 @@ Incluye:
 
 ### 🖼️ **2. Pantalla de Inicio de Sesión**
 
-![Login](
+
 
 Campos:
 - Correo
@@ -80,7 +80,7 @@ Campos:
 
 ### 🖼️ **3. Pantalla Agregar Mascota**
 
-![Agregar]
+
 Formulario con:
 - Nombre mascota  
 - Tipo (perro, gato, etc.)  
@@ -93,7 +93,6 @@ Formulario con:
 
 ### 🖼️ **4. Pantalla Agendar Cita**
 
-![Agendar]
 
 Campos:
 - Mascota
@@ -108,13 +107,27 @@ Incluye:
 
 ### 🖼️ **5. Mensaje de éxito**
 
-![Éxito]
+
 
 Se muestra cuando:
 - Se guarda una mascota
 - Se crea una cita
 
 ---
+### 🖼️ **6. Listado de Mascotas**
+
+- Muestra las mascotas disponibles
+- Boton de agregar mas mascotas
+
+### 🖼️ **7. Listado de Citas**  
+
+-Listado de citas 
+-Boton de agregar citas
+
+### 🖼️ **8. Listado de citas para peluquero**
+
+-Lista de citas para peluquero 
+
 
 ## 🔷 5. Navegación entre páginas
 
