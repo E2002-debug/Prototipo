@@ -135,9 +135,9 @@ Se muestra cuando:
 |-------|----------|
 | Registro | Iniciar sesión |
 | Iniciar sesión | Página principal |
-| Página principal | Agregar mascota / Agendar cita |
+| Página principal | Agregar mascota / Agendar cita / Lista de mascotas / Lista de citas|
 | Agregar mascota | Mensaje de éxito → regresar |
-| Agendar cita | Mensaje de éxito |
+| Agendar cita | Mensaje de éxito -> regresar|
 
 ---
 
